@@ -33,7 +33,7 @@ Vagrant.configure("2") do |config|
         echo "WORKON_HOME=~/.virtualenvs" >> /home/ubuntu/.bashrc
         echo "PROJECT_HOME=/vagrant" >> /home/ubuntu/.bashrc
         echo "source /usr/local/bin/virtualenvwrapper.sh" >> /home/ubuntu/.bashrc
-    fie
+    fi
   SHELL
 
 end
