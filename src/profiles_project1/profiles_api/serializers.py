@@ -8,7 +8,7 @@ class HelloSerializer(serializers.Serializer):
     name = serializers.CharField(max_length=10)
 
 class UserProfileSerializer(serializers.ModelSerializer):
-    """A serializer for ouruser profile objects"""
+    """A serializer for our user profile objects"""
 
     class Meta:
         model = models.UserProfile
@@ -26,4 +26,4 @@ class UserProfileSerializer(serializers.ModelSerializer):
         user.set_password(validated_data['password'])
         user.save()
 
-        return user 
+        return user

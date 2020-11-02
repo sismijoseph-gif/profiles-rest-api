@@ -32,6 +32,7 @@ class HelloApiView(APIView):
         ]
 
         return Response({'message': 'Hello!', 'an_apiview': an_apiview})
+
     def post(self, request):
         """create a hello message with our name."""
 
@@ -44,7 +45,6 @@ class HelloApiView(APIView):
         else:
             return Response(
                 serializer.errors,status=status.HTTP_400_BAD_REQUEST)
-
 
     def put(self, request, pk=None):
         """handles updating an object"""
@@ -68,7 +68,6 @@ class HelloViewSet(viewsets.ViewSet):
 
     def list(self, request):
         """return a hello message"""
-
 
         a_viewset = [
             'uses actions (list, create, retrieve, update, partial_update)',
@@ -121,7 +120,7 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     authentication_classes = (TokenAuthentication,)
     permission_classes = (permissions.UpdateOwnProfile,)
     filter_backends = (filters.SearchFilter,)
-    serach_fields = ('name', 'email',)
+    search_fields = ('name', 'email',)
 
 
 class LoginViewSet(viewsets.ViewSet):

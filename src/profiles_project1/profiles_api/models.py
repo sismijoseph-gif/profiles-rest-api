@@ -59,4 +59,4 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         """ django uses this when it needs to convert the object to a string """
 
-        return self.name
+        return self.email
